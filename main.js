@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth*0.9, window.innerHeight*0.9);
 renderer.setClearColor(0xffffff);
 renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -41,17 +41,13 @@ const groundMaterial = new THREE.MeshStandardMaterial({
 
 const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
 groundMesh.position.y = -2.;
-
-// ✅ Let ground receive shadows
 groundMesh.receiveShadow = true;
-
 scene.add(groundMesh);
 
-// Soft general light
+
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-// Directional light (like sunlight)
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 10, 7);
 directionalLight.castShadow = true;
@@ -62,7 +58,6 @@ loader.load('door.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
-  // ✅ Correct syntax: .traverse
   mesh.traverse((child) => {
     if (child.isMesh) {
       // ✅ Correct spelling: receiveShadow
@@ -71,9 +66,9 @@ loader.load('door.glb', (gltf) => {
     }
   });
 
-  // ✅ Add mesh to scene
-  mesh.scale.set(2, 2, 2);           // Optional: enlarge model
-  mesh.position.set(0, -2, 0);        // Optional: reposition
+
+  mesh.scale.set(2, 2, 2);           
+  mesh.position.set(0, -2, 0);        
   scene.add(mesh);
 });
 
