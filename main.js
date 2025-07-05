@@ -2,22 +2,27 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+const container = document.getElementById('door_container');
+
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.setSize(window.innerWidth*0.9, window.innerHeight*0.9);
-renderer.setClearColor(0xffffff);
 renderer.setPixelRatio(window.devicePixelRatio);
-
-// ✅ Enable shadow map
+renderer.setSize(container.clientWidth, container.clientHeight);
+renderer.setClearColor(0xffffff);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-document.body.appendChild(renderer.domElement);
+container.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+const camera = new THREE.PerspectiveCamera(
+  40,
+  container.clientWidth / container.clientHeight,
+  1,
+  1000
+);
 camera.position.set(0, 0, 6);
+camera.aspect = container.clientWidth / container.clientHeight;
 camera.lookAt(0, 0, 0);
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -78,3 +83,12 @@ function animate() {
 }
 
 animate();
+
+// Reaktion auf Fenstergröße
+window.addEventListener('resize', () => {
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+});
