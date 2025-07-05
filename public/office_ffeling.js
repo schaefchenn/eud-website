@@ -16,12 +16,12 @@ container.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
-  45,
+  50,
   container.clientWidth / container.clientHeight,
   1,
   1000
 );
-camera.position.set(0, 0, 6);
+camera.position.set(0, 2, 6);
 camera.aspect = container.clientWidth / container.clientHeight;
 camera.lookAt(0, 0, 0);
 
@@ -53,15 +53,15 @@ scene.add(groundMesh);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 10, 7);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 2.0);
+directionalLight.position.set(-10, 10, 7);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
 const isLocalhost = location.hostname === 'localhost' || location.hostname.startsWith('127.');
 const assetPath = isLocalhost ? '/assets/3Dmodel/' : '../assets/3Dmodel/';
 const loader = new GLTFLoader().setPath(assetPath);
-loader.load('door.glb', (gltf) => {
+loader.load('office_feeling.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
@@ -74,7 +74,8 @@ loader.load('door.glb', (gltf) => {
 
 
   mesh.scale.set(2, 2, 2);           
-  mesh.position.set(0, -2, 0);        
+  mesh.position.set(0, -2, 0);
+  mesh.rotation.y = 0.4;        
   scene.add(mesh);
 });
 
