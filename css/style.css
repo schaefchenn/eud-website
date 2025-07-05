@@ -193,3 +193,91 @@ html, body {
   font-size: 1.3rem;
   background-color: #E5E5CB;
 }
+
+@media (max-width: 768px) {
+  /* Navbar: vertikale Navigation mit mehr Abstand */
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #1A120B;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    display: none; /* versteckt, bis Hamburger aktiv ist */
+    border-radius: 0 0 0 8px;
+  }
+
+  /* Einfache Hamburger-Schaltfläche */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+  }
+
+  .hamburger span {
+    background: white;
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* Wenn Menü aktiv ist */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Dropdown-Menü auf Mobil mit Klick öffnen (hier nur visuell vorbereiten) */
+  .dropdown:hover .dropdown-menu {
+    display: none; /* Hover nicht nutzen */
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    background: #2e2e2e;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    display: none;
+    flex-direction: column;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+
+  /* Buttons und Schriftgrößen anpassen */
+  button.btn-lg {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  #text-column {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-size: 1.1rem;
+  }
+
+  /* Bilder responsive */
+  .mobileImage {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #custom_carousel {
+    max-width: 100%;  /* volle Breite */
+    padding-top: 0;   /* Padding oben entfernen */
+    margin: 0;        /* kein zentrierter Abstand */
+    width: 100vw;     /* viewport volle Breite */
+  }
+  
+  .gradient-background{
+    padding-bottom: 4rem;
+  }
+
+}
