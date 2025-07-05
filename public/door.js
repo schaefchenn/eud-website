@@ -58,7 +58,9 @@ directionalLight.position.set(5, 10, 7);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
-const loader = new GLTFLoader().setPath('../assets/3Dmodel/');
+const isLocalhost = location.hostname === 'localhost' || location.hostname.startsWith('127.');
+const assetPath = isLocalhost ? '/assets/3Dmodel/' : '../assets/3Dmodel/';
+const loader = new GLTFLoader().setPath(assetPath);
 loader.load('door.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
