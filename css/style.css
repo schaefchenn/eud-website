@@ -160,6 +160,10 @@ html, body {
   display: block;
 }
 
+#planeSVG {
+    margin-right: 1rem;
+}
+
 @media (max-width: 768px) {
   #layout {
     flex-direction: column-reverse; /* Modell oben, Text darunter */
@@ -240,7 +244,7 @@ html, body {
   .dropdown-menu {
     position: static;
     border: none;
-    background: #2e2e2e;
+    background: #E5E5CB;
     padding-left: 1rem;
     margin-top: 0.5rem;
     display: none;
@@ -280,4 +284,11 @@ html, body {
     padding-bottom: 4rem;
   }
 
+  #heroImage {
+    display: none;
+  }
+
+  #testi {
+    margin-left: 2rem;
+  }
 }
