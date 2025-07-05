@@ -45,6 +45,18 @@ html, body {
   color: #ccc;
 }
 
+.no-link-style {
+  color: inherit;          /* Farbe vom Eltern-Element übernehmen */
+  text-decoration: none;   /* keine Unterstreichung */
+  cursor: pointer;         /* Mauszeiger wird zur Hand beim Hover */
+}
+
+.no-link-style:hover {
+  color: #ccc;             /* optional: Farbe beim Hover ändern */
+  text-decoration: none;
+}
+
+
 
 .dropdown-menu {
   display: none;
