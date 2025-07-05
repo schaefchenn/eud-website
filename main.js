@@ -16,7 +16,7 @@ container.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
-  40,
+  45,
   container.clientWidth / container.clientHeight,
   1,
   1000
@@ -58,14 +58,13 @@ directionalLight.position.set(5, 10, 7);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
-const loader = new GLTFLoader().setPath('public/3d_model/');
+const loader = new GLTFLoader().setPath('assets/3Dmodel/');
 loader.load('door.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
   mesh.traverse((child) => {
     if (child.isMesh) {
-      // ✅ Correct spelling: receiveShadow
       child.castShadow = true;
       child.receiveShadow = true;
     }
