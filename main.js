@@ -17,7 +17,7 @@ document.body.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-camera.position.set(4, 5, 11);
+camera.position.set(0, 0, 6);
 camera.lookAt(0, 0, 0);
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -28,7 +28,7 @@ controls.maxDistance = 20;
 controls.minPolarAngle = 0.5;
 controls.maxPolarAngle = 1.5;
 controls.autoRotate = false;
-controls.target = new THREE.Vector3(2, 1, 0);
+controls.target = new THREE.Vector3(0, 0, 0);
 controls.update();
 
 const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
@@ -40,7 +40,7 @@ const groundMaterial = new THREE.MeshStandardMaterial({
 });
 
 const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
-groundMesh.position.y = 0.;
+groundMesh.position.y = -2.;
 
 // ✅ Let ground receive shadows
 groundMesh.receiveShadow = true;
@@ -73,7 +73,7 @@ loader.load('door.glb', (gltf) => {
 
   // ✅ Add mesh to scene
   mesh.scale.set(2, 2, 2);           // Optional: enlarge model
-  mesh.position.set(0, 0, 0);        // Optional: reposition
+  mesh.position.set(0, -2, 0);        // Optional: reposition
   scene.add(mesh);
 });
 
