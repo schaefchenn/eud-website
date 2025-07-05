@@ -20,6 +20,8 @@ html, body {
 }
 
 .nav-brand {
+  color: white;
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -93,6 +95,12 @@ html, body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+#custom_carousel {
+  max-width: 100vh;
+  margin: 0 auto;
+  padding-top: 5rem;
 }
 
 .icon-square {
