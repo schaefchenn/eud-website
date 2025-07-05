@@ -58,7 +58,7 @@ directionalLight.position.set(5, 10, 7);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
-const loader = new GLTFLoader().setPath('/assets/3Dmodel/');
+const loader = new GLTFLoader().setPath('../assets/3Dmodel/');
 loader.load('door.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
