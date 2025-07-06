@@ -245,17 +245,37 @@ html, body {
 }
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1025px) and (orientation: portrait) {
+@media (min-width: 968px) and (max-width: 1238px) {
   #custom_carousel {
     max-width: 100%;  /* volle Breite */
     padding-top: 0;   /* Padding oben entfernen */
     margin: 0;        /* kein zentrierter Abstand */
     width: 100vw;     /* viewport volle Breite */
   }
+
+   #british {
+    height: 80px;
+  }
+
+  #emirates {
+    height: 100px;
+  }
+
+  #singapore {
+    height: 110px;
+  }
+
+  #lufthansa {
+   height: 110px
+  }
+  
+  .testiImg {
+    padding-top: 3rem;
+  }
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     #layout {
     flex-direction: column-reverse; /* Modell oben, Text darunter */
     height: auto;                   /* damit es sich an den Inhalt anpasst */
