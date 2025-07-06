@@ -296,6 +296,15 @@ html, body {
   margin-top: 2rem;
 }
 
+#why {
+  display: flex; /* wichtig, sonst greift justify-content nicht */
+  justify-content: left;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: #3C2A21;
+  flex-direction: row;
+}
+
 
 
 
