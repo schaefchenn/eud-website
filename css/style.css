@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -318,6 +319,24 @@ html, body {
     max-width: 600px;
   }
 
+.left-img {
+  flex: 1;
+  max-width: 400px;
+}
+
+.image-container {
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  width: 100%;           /* Container nimmt volle Breite */
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;           /* Bild füllt volle Breite */
+  height: 100%;          /* Bild füllt volle Höhe */
+  object-fit: cover;     /* Bild wird zugeschnitten, damit es Container komplett füllt */
+  display: block;        /* verhindert kleinen Abstand unter Bildern */
+}
 
 @media (min-width: 968px) and (max-width: 1238px) {
   #custom_carousel {
@@ -350,7 +369,7 @@ html, body {
 
 
 @media (max-width: 968px) {
-    #layout {
+  #layout {
     flex-direction: column-reverse; /* Modell oben, Text darunter */
     height: auto;                   /* damit es sich an den Inhalt anpasst */
   }
