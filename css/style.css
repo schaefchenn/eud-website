@@ -335,11 +335,22 @@ html, body {
   width: 100%;           /* Bild füllt volle Breite */
   height: 100%;          /* Bild füllt volle Höhe */
   object-fit: cover;     /* Bild wird zugeschnitten, damit es Container komplett füllt */
-  object-position: center -125px;
+  object-position: center calc(-6.5vw);
   display: block;        /* verhindert kleinen Abstand unter Bildern */
 }
 
 @media (min-width: 968px) and (max-width: 1238px) {
+   .image-container {
+    height: auto; /* passt sich der Bildhöhe an */
+    overflow: visible; /* kein Abschneiden */
+  }
+
+  .image-container img {
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+  }
+  
   #custom_carousel {
     max-width: 100%;  /* volle Breite */
     padding-top: 0;   /* Padding oben entfernen */
@@ -380,7 +391,7 @@ html, body {
     object-fit: contain;
     object-position: center center;
   }
-  
+
   #layout {
     flex-direction: column-reverse; /* Modell oben, Text darunter */
     height: auto;                   /* damit es sich an den Inhalt anpasst */
