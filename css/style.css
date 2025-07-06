@@ -349,6 +349,28 @@ html, body {
   display: block;        /* verhindert kleinen Abstand unter Bildern */
 }
 
+#entrance {
+  display: flex;
+  height: calc(100vh - 60px); /* Höhe abzüglich Navbar */
+  width: 100vw;
+  overflow: hidden;
+}
+
+#entrance > div {
+  flex: 1;                     /* 3 gleiche Spalten */
+  overflow: hidden;           /* Bild nicht über den Container hinaus */
+  height: 100%;
+}
+
+#entrance img {
+  width: 100%;                /* Bild füllt die Spalte */
+  height: 100%;               /* Bild füllt die Höhe */
+  object-fit: cover; 
+  object-position: center calc(-11vw);         /* Bild wird ggf. zugeschnitten */
+  display: block;
+}
+
+
 @media (min-width: 968px) and (max-width: 1238px) {
 
   #ergo {
