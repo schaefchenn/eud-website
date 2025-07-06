@@ -92,7 +92,7 @@ loader.load(
 
     mesh.scale.set(2, 2, 2);           
     mesh.position.set(-0.5, -2, 0);
-    mesh.rotation.y = 0.4;        
+    mesh.rotation.y =  0.6;        
     scene.add(mesh);
 
     // Ladesymbol ausblenden
