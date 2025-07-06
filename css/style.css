@@ -244,6 +244,60 @@ html, body {
   color: #ddd !important; /* Heller beim Hover */
 }
 
+.circle-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #3C2A21;
+  background-image: url('dein-bild.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#floUndIch {
+  display: flex; /* wichtig, sonst greift justify-content nicht */
+  justify-content: left;
+  margin-top: 5rem;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.flex-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;  /* Links ausrichten */
+  padding-left: 20%;             /* Abstand zum linken Rand */
+  flex-wrap: wrap;              /* Responsives Verhalten */
+  align-items: center;
+  padding-right:20%;
+}
+
+.box {
+  flex: 2; /* nimmt doppelt so viel Platz wie das Bild */
+  color: black;
+  font-size: large;
+  padding: 20px;
+  flex: 1; /* Gleiche Breite für beide Boxen */
+}
+
+.box p {
+  margin: 0px 0; /* oder z.B. 2px für noch weniger Abstand */
+}
+
+.flo {
+  text-align: left;
+}
+
+.marcel {
+  text-align: right;
+}
+
+#marcel {
+  margin-top: 2rem;
+}
+
+
+
 
 @media (min-width: 968px) and (max-width: 1238px) {
   #custom_carousel {
