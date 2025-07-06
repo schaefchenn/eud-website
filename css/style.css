@@ -560,6 +560,37 @@ html, body {
   .flo {
     font-size: 0.9rem;
   }
+
+  .hmm {
+    margin-bottom: 2rem;
+  }
+
+  .hmm2 {
+    margin-bottom: 3rem;
+  }
+
+  .mei {
+    height: 300px !important;
+    width: 300px !important;
+  }
+
+  #persona {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .meiLi {
+    margin-bottom: 1rem;
+  }
+
+  .meiProf {
+    margin-bottom: 3rem !important; 
+  }
+
+  #ergonomics {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @media (max-width: 620px) {
