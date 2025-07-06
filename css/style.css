@@ -266,10 +266,10 @@ html, body {
   display: flex;
   gap: 20px;
   justify-content: flex-start;  /* Links ausrichten */
-  padding-left: 20%;             /* Abstand zum linken Rand */
+  padding-left: 15%;             /* Abstand zum linken Rand */
   flex-wrap: wrap;              /* Responsives Verhalten */
   align-items: center;
-  padding-right:20%;
+  padding-right:15%;
 }
 
 .box {
@@ -314,6 +314,9 @@ html, body {
   background-color: #3C2A21;
 }
 
+.bigDs {
+  height: 180px;
+}
 
 
 @media (min-width: 968px) and (max-width: 1238px) {
@@ -543,6 +546,18 @@ html, body {
   
   .testiImg {
     padding-top: 3rem;
+  }
+
+  .bigDs {
+    height: 120px;
+  }
+
+  .marcel {
+    font-size: 0.9rem;
+  }
+
+  .flo {
+    font-size: 0.9rem;
   }
 }
 
