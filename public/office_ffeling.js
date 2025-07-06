@@ -25,6 +25,21 @@ camera.position.set(0, 2, 6);
 camera.aspect = container.clientWidth / container.clientHeight;
 camera.lookAt(0, 0, 0);
 
+function updateCameraPosition(isMobile) {
+  if (isMobile) {
+    camera.position.set(-2, 0, 6);  // Handy-Position
+  } else {
+    camera.position.set(0, 2, 6);    // Desktop-Position
+  }
+  camera.lookAt(0, 0, 0);
+  camera.updateProjectionMatrix();
+}
+
+const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+
+updateCameraPosition(mediaQuery.matches);
+
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
@@ -61,23 +76,38 @@ scene.add(directionalLight);
 const isLocalhost = location.hostname === 'localhost' || location.hostname.startsWith('127.');
 const assetPath = isLocalhost ? '/assets/3Dmodel/' : '../assets/3Dmodel/';
 const loader = new GLTFLoader().setPath(assetPath);
-loader.load('office_feeling.glb', (gltf) => {
-  console.log('loading model');
-  const mesh = gltf.scene;
+const loaderElement = document.getElementById('loader');
+loader.load(
+  'office_feeling.glb',
+  (gltf) => {
+    console.log('loading model');
+    const mesh = gltf.scene;
 
-  mesh.traverse((child) => {
-    if (child.isMesh) {
-      child.castShadow = true;
-      child.receiveShadow = true;
-    }
-  });
+    mesh.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
 
+    mesh.scale.set(2, 2, 2);           
+    mesh.position.set(-0.5, -2, 0);
+    mesh.rotation.y = 0.4;        
+    scene.add(mesh);
 
-  mesh.scale.set(2, 2, 2);           
-  mesh.position.set(0, -2, 0);
-  mesh.rotation.y = 0.4;        
-  scene.add(mesh);
-});
+    // Ladesymbol ausblenden
+    if (loaderElement) loaderElement.style.display = 'none';
+  },
+  (xhr) => {
+    // Optional: Ladefortschritt anzeigen
+    const percent = (xhr.loaded / xhr.total) * 100;
+    console.log(`Loading: ${percent.toFixed(0)}%`);
+  },
+  (error) => {
+    console.error('Fehler beim Laden des Modells:', error);
+    if (loaderElement) loaderElement.style.display = 'none';
+  }
+);
 
 function animate() {
   requestAnimationFrame(animate);
@@ -117,36 +147,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-const loaderElement = document.getElementById('loader');
-loader.load(
-  'office_feeling.glb',
-  (gltf) => {
-    console.log('loading model');
-    const mesh = gltf.scene;
-
-    mesh.traverse((child) => {
-      if (child.isMesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    });
-
-    mesh.scale.set(2, 2, 2);           
-    mesh.position.set(0, -2, 0);
-    mesh.rotation.y = 0.4;        
-    scene.add(mesh);
-
-    // Ladesymbol ausblenden
-    if (loaderElement) loaderElement.style.display = 'none';
-  },
-  (xhr) => {
-    // Optional: Ladefortschritt anzeigen
-    const percent = (xhr.loaded / xhr.total) * 100;
-    console.log(`Loading: ${percent.toFixed(0)}%`);
-  },
-  (error) => {
-    console.error('Fehler beim Laden des Modells:', error);
-    if (loaderElement) loaderElement.style.display = 'none';
-  }
-);
