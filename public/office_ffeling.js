@@ -117,3 +117,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const loaderElement = document.getElementById('loader');
+loader.load(
+  'office_feeling.glb',
+  (gltf) => {
+    console.log('loading model');
+    const mesh = gltf.scene;
+
+    mesh.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+
+    mesh.scale.set(2, 2, 2);           
+    mesh.position.set(0, -2, 0);
+    mesh.rotation.y = 0.4;        
+    scene.add(mesh);
+
+    // Ladesymbol ausblenden
+    if (loaderElement) loaderElement.style.display = 'none';
+  },
+  (xhr) => {
+    // Optional: Ladefortschritt anzeigen
+    const percent = (xhr.loaded / xhr.total) * 100;
+    console.log(`Loading: ${percent.toFixed(0)}%`);
+  },
+  (error) => {
+    console.error('Fehler beim Laden des Modells:', error);
+    if (loaderElement) loaderElement.style.display = 'none';
+  }
+);
