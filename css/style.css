@@ -191,27 +191,6 @@ html, body {
   to { transform: rotate(360deg); }
 }
 
-@media (max-width: 1024px) {
-  #layout {
-    flex-direction: column-reverse; /* Modell oben, Text darunter */
-    height: auto;                   /* damit es sich an den Inhalt anpasst */
-  }
-
-  #text-column,
-  #three-column {
-    width: 100%;
-    height: auto;
-  }
-
-  #door_container {
-    height: 60vh; /* z. B. 60% der Höhe für Modell */
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
 
 #text-column {
   display: flex;
@@ -268,7 +247,80 @@ html, body {
 
 
 
-@media (max-width: 936px) {
+@media (max-width: 768px) {
+    #layout {
+    flex-direction: column-reverse; /* Modell oben, Text darunter */
+    height: auto;                   /* damit es sich an den Inhalt anpasst */
+  }
+
+  #text-column,
+  #three-column {
+    width: 100%;
+    height: auto;
+  }
+
+  #door_container {
+    height: 60vh; /* z. B. 60% der Höhe für Modell */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+
+#text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertikal zentrieren */
+  align-items: center;     /* horizontal zentrieren */
+  text-align: center;      /* Textinhalt zentrieren */
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-size: 1.3rem;
+  background-color: #E5E5CB;
+}
+
+.testi2 {
+  padding-bottom: 3rem;
+}
+
+#british {
+  height: 105px;
+}
+
+#emirates {
+  height: 120px;
+}
+
+#singapore {
+  height: 130px;
+}
+
+#lufthansa {
+  height: 130px
+}
+
+#footerOne {
+  background-color: #1A120B;
+  padding-top: 0.8rem;
+}
+
+.footer-custom {
+  color: white !important;
+}
+
+.footer-custom a,
+.footer-custom p,
+.footer-custom .nav-link {
+  color: white !important;
+  text-decoration: none;
+}
+
+.footer-custom .nav-link:hover {
+  color: #ddd !important; /* Heller beim Hover */
+}
+
   /* Navbar: vertikale Navigation mit mehr Abstand */
   .nav-links {
     flex-direction: column;
