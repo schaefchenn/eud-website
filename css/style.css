@@ -166,11 +166,11 @@ html, body {
 
 .loader {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(calc(-50% + 300px), -50%);
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  background: rgba(255,255,255,0.8);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -350,16 +350,6 @@ html, body {
 
 
 @media (max-width: 968px) {
-  .loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-  }
     #layout {
     flex-direction: column-reverse; /* Modell oben, Text darunter */
     height: auto;                   /* damit es sich an den Inhalt anpasst */
