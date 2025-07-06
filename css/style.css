@@ -316,6 +316,7 @@ html, body {
   padding-right: 20rem;
   text-align: center;
 }
+
 #persona {
   background-color: #3C2A21;
 }
@@ -349,6 +350,17 @@ html, body {
 }
 
 @media (min-width: 968px) and (max-width: 1238px) {
+
+  #ergo {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    text-align: center;
+  }
+
    .image-container {
     height: auto; /* passt sich der Bildhöhe an */
     overflow: visible; /* kein Abschneiden */
@@ -390,6 +402,16 @@ html, body {
 
 
 @media (max-width: 968px) {
+  #ergo {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+
   .dropdown-menu li a {
     color: white !important;            /* Textfarbe auf weiß */
     background-color: transparent;      /* optional: Hintergrund */
