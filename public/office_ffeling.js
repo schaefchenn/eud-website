@@ -29,7 +29,7 @@ function updateCameraPosition(isMobile) {
   if (isMobile) {
     camera.position.set(-2, 0, 6);  // Handy-Position
   } else {
-    camera.position.set(0, 2, 6);    // Desktop-Position
+    camera.position.set(0, 0, 6);    // Desktop-Position
   }
   camera.lookAt(0, 0, 0);
   camera.updateProjectionMatrix();
