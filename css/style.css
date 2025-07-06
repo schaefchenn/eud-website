@@ -4,7 +4,6 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;
-  background-color: white;
 }
 
 /* Navbar */
@@ -35,6 +34,7 @@ html, body {
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  z-index: 10000;
 }
 
 .nav-links li a {
