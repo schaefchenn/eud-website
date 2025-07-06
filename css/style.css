@@ -307,6 +307,15 @@ html, body {
   padding-bottom: 5rem;
 }
 
+#ergo {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  text-align: center;
+}
 #persona {
   background-color: #3C2A21;
 }
@@ -381,6 +390,16 @@ html, body {
 
 
 @media (max-width: 968px) {
+  .dropdown-menu li a {
+    color: white !important;            /* Textfarbe auf weiß */
+    background-color: transparent;      /* optional: Hintergrund */
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #333;             /* optional: dunkler Hover-Hintergrund */
+    color: #fff !important;             /* Text bleibt weiß beim Hover */
+  }
+
   .image-container {
     height: auto; /* passt sich der Bildhöhe an */
     overflow: visible; /* kein Abschneiden */
@@ -511,11 +530,11 @@ html, body {
   .dropdown-menu {
     position: static;
     border: none;
-    background: #E5E5CB;
     padding-left: 1rem;
     margin-top: 0.5rem;
     display: none;
     flex-direction: column;
+    background-color: #1A120B;
   }
 
   .dropdown.active .dropdown-menu {
