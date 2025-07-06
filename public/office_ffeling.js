@@ -78,7 +78,7 @@ const assetPath = isLocalhost ? '/assets/3Dmodel/' : '../assets/3Dmodel/';
 const loader = new GLTFLoader().setPath(assetPath);
 const loaderElement = document.getElementById('loader');
 loader.load(
-  'office_feeling.glb',
+  'office.glb',
   (gltf) => {
     console.log('loading model');
     const mesh = gltf.scene;
