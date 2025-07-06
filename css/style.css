@@ -560,5 +560,9 @@ html, body {
   .flo {
     font-size: 0.9rem;
   }
-}
 
+  #floUndIch {
+    margin-left: 0.5%;
+    margin-right: 0.1%;
+  }
+}
