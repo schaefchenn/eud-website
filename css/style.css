@@ -245,6 +245,14 @@ html, body {
 }
 
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1025px) and (orientation: portrait) {
+  #custom_carousel {
+    max-width: 100%;  /* volle Breite */
+    padding-top: 0;   /* Padding oben entfernen */
+    margin: 0;        /* kein zentrierter Abstand */
+    width: 100vw;     /* viewport volle Breite */
+  }
+}
 
 
 @media (max-width: 768px) {
@@ -269,57 +277,57 @@ html, body {
   }
 
 
-#text-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertikal zentrieren */
-  align-items: center;     /* horizontal zentrieren */
-  text-align: center;      /* Textinhalt zentrieren */
-  padding-left: 5rem;
-  padding-right: 5rem;
-  font-size: 1.3rem;
-  background-color: #E5E5CB;
-}
+  #text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertikal zentrieren */
+    align-items: center;     /* horizontal zentrieren */
+    text-align: center;      /* Textinhalt zentrieren */
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 1.3rem;
+    background-color: #E5E5CB;
+  }
 
-.testi2 {
-  padding-bottom: 3rem;
-}
+  .testi2 {
+    padding-bottom: 3rem;
+  }
 
-#british {
-  height: 105px;
-}
+  #british {
+    height: 105px;
+  }
 
-#emirates {
-  height: 120px;
-}
+  #emirates {
+    height: 120px;
+  }
 
-#singapore {
-  height: 130px;
-}
+  #singapore {
+    height: 130px;
+  }
 
-#lufthansa {
-  height: 130px
-}
+  #lufthansa {
+    height: 130px
+  }
 
-#footerOne {
-  background-color: #1A120B;
-  padding-top: 0.8rem;
-}
+  #footerOne {
+    background-color: #1A120B;
+    padding-top: 0.8rem;
+  }
 
-.footer-custom {
-  color: white !important;
-}
+  .footer-custom {
+    color: white !important;
+  }
 
-.footer-custom a,
-.footer-custom p,
-.footer-custom .nav-link {
-  color: white !important;
-  text-decoration: none;
-}
+  .footer-custom a,
+  .footer-custom p,
+  .footer-custom .nav-link {
+    color: white !important;
+    text-decoration: none;
+  }
 
-.footer-custom .nav-link:hover {
-  color: #ddd !important; /* Heller beim Hover */
-}
+  .footer-custom .nav-link:hover {
+    color: #ddd !important; /* Heller beim Hover */
+  }
 
   /* Navbar: vertikale Navigation mit mehr Abstand */
   .nav-links {
