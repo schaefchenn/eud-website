@@ -198,7 +198,7 @@ html, body {
   background-color: #E5E5CB;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 936px) {
   /* Navbar: vertikale Navigation mit mehr Abstand */
   .nav-links {
     flex-direction: column;
@@ -281,7 +281,8 @@ html, body {
   }
   
   .gradient-background{
-    padding-bottom: 4rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
   }
 
   #heroImage {
@@ -290,5 +291,16 @@ html, body {
 
   #testi {
     margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  #text-column {
+    margin-top: 0;
+    padding-top: 1rem; /* ggf. weniger padding */
+  }
+
+  .bookNow {
+    padding-top: 0 !important;
+    margin-top: 0 !important; /* falls auch Margin oben da ist */
   }
 }
