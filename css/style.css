@@ -299,10 +299,14 @@ html, body {
 #why {
   display: flex; /* wichtig, sonst greift justify-content nicht */
   justify-content: left;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
   background-color: #3C2A21;
   flex-direction: row;
+}
+
+#concept {
+  margin-left: 5rem;
+  margin-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 
