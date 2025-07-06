@@ -550,7 +550,7 @@ html, body {
   }
 
   .bigDs {
-    height: 120px;
+    height: 150px;
   }
 
   .marcel {
@@ -560,9 +560,26 @@ html, body {
   .flo {
     font-size: 0.9rem;
   }
+}
 
-  #floUndIch {
-    margin-left: 0.5%;
-    margin-right: 0.1%;
+@media (max-width: 620px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #marcel {
+    flex-direction: column-reverse;
+    margin-top: 3rem;
+  }
+
+  .marcel {
+    text-align: left;
+  }
+
+  .profilePic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
