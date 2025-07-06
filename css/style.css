@@ -314,6 +314,10 @@ html, body {
   height: 180px;
 }
 
+.miniCarousel {
+    max-width: 600px;
+  }
+
 
 @media (min-width: 968px) and (max-width: 1238px) {
   #custom_carousel {
@@ -586,6 +590,10 @@ html, body {
   #ergonomics {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .miniCarousel {
+    max-width: 100%;
   }
 }
 
