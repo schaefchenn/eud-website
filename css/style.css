@@ -19,7 +19,7 @@ html, body {
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .nav-brand {
@@ -219,6 +219,10 @@ html, body {
   padding-right: 5rem;
   font-size: 1.3rem;
   background-color: #E5E5CB;
+}
+
+.testi2 {
+  padding-bottom: 3rem;
 }
 
 @media (max-width: 936px) {
