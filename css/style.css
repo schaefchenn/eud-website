@@ -7,6 +7,11 @@ html, body {
   overflow-x: hidden;
 }
 
+.custom_container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -239,6 +244,8 @@ html, body {
 #footerOne {
   background-color: #1A120B;
   padding-top: 0.8rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .footer-custom {
@@ -332,12 +339,26 @@ html, body {
   background-color: #ccc;
 }
 
+#b2bCost {
+  text-align: left;
+  background-color: #ccc;
+}
+
 .b2b {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 25rem;
   padding-right: 25rem;
   text-align: center;
+  background-color: #ccc;
+}
+
+.b2bCost {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
+  text-align: left;
   background-color: #ccc;
 }
 
@@ -396,6 +417,11 @@ html, body {
 
 
 @media (min-width: 968px) and (max-width: 1238px) {
+  .custom_container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
   #ergo {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -403,6 +429,34 @@ html, body {
     padding-left: 10rem;
     padding-right: 10rem;
     text-align: center;
+  }
+
+  #b2b {
+    text-align: center;
+    background-color: #ccc;
+  }
+
+  #b2bCost{
+    text-align: left;
+    background-color: #ccc;
+  }
+
+  .b2b {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    text-align: center;
+    background-color: #ccc;
+  }
+
+  .b2bCost {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    text-align: left;
+    background-color: #ccc;
   }
 
    .image-container {
@@ -446,6 +500,11 @@ html, body {
 
 
 @media (max-width: 968px) {
+  .custom_container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .feature {
     margin-left: 0;
     margin-right: 0;
@@ -457,6 +516,33 @@ html, body {
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
+  }
+
+  #b2b {
+    text-align: center;
+    background-color: #ccc;
+  }
+
+  #b2bCost {
+    background-color: #ccc;
+  }
+
+  .b2b {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: center;
+    background-color: #ccc;
+  }
+
+  .b2bCost {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: left;
+    background-color: #ccc;
   }
 
   .dropdown-menu li a {
