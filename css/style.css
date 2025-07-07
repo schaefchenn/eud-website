@@ -22,6 +22,11 @@ html, body {
   z-index: 9999;
 }
 
+.feature {
+  margin-left: 10%;
+  margin-right: 12%;
+}
+
 .nav-brand {
   color: white;
   text-decoration: none;
@@ -378,7 +383,6 @@ html, body {
 
 
 @media (min-width: 968px) and (max-width: 1238px) {
-
   #ergo {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -430,6 +434,23 @@ html, body {
 
 
 @media (max-width: 968px) {
+  #concept2 .row.featurette {
+    flex-direction: column; /* Spalten werden untereinander statt nebeneinander */
+  }
+  
+  #concept2 .col-md-6 {
+    width: 100%; /* volle Breite für beide Spalten */
+    max-width: 100%;
+  }
+
+  #concept2 .col-md-6.p-0 {
+    order: 2; /* Bild nach unten */
+  }
+
+  #concept2 .col-md-6.d-flex.align-items-center {
+    order: 1; /* Text nach oben */
+  }
+
   #ergo {
     margin-left: 5rem;
     margin-right: 5rem;
