@@ -434,23 +434,6 @@ html, body {
 
 
 @media (max-width: 968px) {
-  #concept2 .row.featurette {
-    flex-direction: column; /* Spalten werden untereinander statt nebeneinander */
-  }
-  
-  #concept2 .col-md-6 {
-    width: 100%; /* volle Breite für beide Spalten */
-    max-width: 100%;
-  }
-
-  #concept2 .col-md-6.p-0 {
-    order: 2; /* Bild nach unten */
-  }
-
-  #concept2 .col-md-6.d-flex.align-items-center {
-    order: 1; /* Text nach oben */
-  }
-
   #ergo {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -543,6 +526,8 @@ html, body {
   #footerOne {
     background-color: #1A120B;
     padding-top: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .footer-custom {
