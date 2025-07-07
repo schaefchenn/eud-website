@@ -21,7 +21,7 @@ const camera = new THREE.PerspectiveCamera(
   1,
   1000
 );
-camera.position.set(0, 2, 6);
+camera.position.set(0, 0, 6);
 camera.aspect = container.clientWidth / container.clientHeight;
 camera.lookAt(0, 0, 0);
 
