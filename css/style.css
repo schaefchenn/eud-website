@@ -327,6 +327,20 @@ html, body {
   text-align: center;
 }
 
+#b2b {
+  text-align: center;
+  background-color: #ccc;
+}
+
+.b2b {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
+  text-align: center;
+  background-color: #ccc;
+}
+
 #persona {
   background-color: #3C2A21;
 }
