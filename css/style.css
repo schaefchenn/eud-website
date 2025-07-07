@@ -680,6 +680,18 @@ html, body {
     background-color: #E5E5CB;
   }
 
+  #text-column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertikal zentrieren */
+    align-items: center;     /* horizontal zentrieren */
+    text-align: center;      /* Textinhalt zentrieren */
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 1.3rem;
+    background-color: #E5E5CB;
+  }
+
   .testi2 {
     padding-bottom: 3rem;
   }
