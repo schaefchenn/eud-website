@@ -161,6 +161,12 @@ html, body {
   display: block;
 }
 
+#door2_container {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 #planeSVG {
     margin-right: 1rem;
 }
