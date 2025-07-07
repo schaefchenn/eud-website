@@ -19,9 +19,9 @@ const camera = new THREE.PerspectiveCamera(
   45,
   container.clientWidth / container.clientHeight,
   1,
-  1000
+  100
 );
-camera.position.set(0, 0, 5);
+camera.position.set(0, 2, 6);
 camera.aspect = container.clientWidth / container.clientHeight;
 camera.lookAt(0, 1, 0);
 
@@ -45,7 +45,7 @@ const groundMaterial = new THREE.MeshStandardMaterial({
 });
 
 const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
-groundMesh.position.y = -1.5;
+groundMesh.position.y = -.5;
 groundMesh.receiveShadow = true;
 scene.add(groundMesh);
 
@@ -61,7 +61,7 @@ scene.add(directionalLight);
 const isLocalhost = location.hostname === 'localhost' || location.hostname.startsWith('127.');
 const assetPath = isLocalhost ? '/assets/3Dmodel/' : '../assets/3Dmodel/';
 const loader = new GLTFLoader().setPath(assetPath);
-loader.load('seat.glb', (gltf) => {
+loader.load('doc.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
@@ -73,9 +73,9 @@ loader.load('seat.glb', (gltf) => {
   });
 
 
-  mesh.scale.set(2, 2, 2);           
-  mesh.position.set(0, -1.5, 0);
-  mesh.rotation.y =  -0.9;       
+  mesh.scale.set(30, 30, 30);           
+  mesh.position.set(0, -0.5, 0);
+  mesh.rotation.y =  0.8;       
   scene.add(mesh);
 });
 
