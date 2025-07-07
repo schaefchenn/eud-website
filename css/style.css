@@ -8,6 +8,7 @@ html, body {
 }
 .yo {
   padding-top: 2rem;
+  text-align: left;
 }
 
 .custom_container {
@@ -344,7 +345,7 @@ html, body {
 }
 
 #b2bCost {
-  text-align: left;
+  text-align: center;
   background-color: #ccc;
 }
 
@@ -362,7 +363,7 @@ html, body {
   padding-bottom: 5rem;
   padding-left: 25rem;
   padding-right: 25rem;
-  text-align: left;
+  text-align: center;
   background-color: #ccc;
 }
 
@@ -441,7 +442,7 @@ html, body {
   }
 
   #b2bCost{
-    text-align: left;
+    text-align: center;
     background-color: #ccc;
   }
 
@@ -459,7 +460,7 @@ html, body {
     padding-bottom: 5rem;
     padding-left: 10rem;
     padding-right: 10rem;
-    text-align: left;
+    text-align: center;
     background-color: #ccc;
   }
 
@@ -504,6 +505,12 @@ html, body {
 
 
 @media (max-width: 968px) {
+  table,
+  table th,
+  table td {
+    font-size: 12px; /* oder kleiner, z. B. 10px */
+  }
+
   .custom_container {
     padding-left: 0;
     padding-right: 0;
@@ -532,6 +539,10 @@ html, body {
     background-color: #ccc;
   }
 
+  .yo {
+    padding-top: 0;
+  }
+  
   .b2b {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -546,7 +557,7 @@ html, body {
     padding-bottom: 5rem;
     padding-left: 5rem;
     padding-right: 5rem;
-    text-align: left;
+    text-align: center;
     background-color: #ccc;
   }
 
