@@ -385,20 +385,20 @@ html, body {
 }
 
 .image-container {
-  height: calc(100vh - 60px);
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Beispiel: Breitbild */
   overflow: hidden;
-  width: 100%;           /* Container nimmt volle Breite */
   position: relative;
+  margin: 0 auto;
 }
 
 .image-container img {
-  width: 100%;           /* Bild füllt volle Breite */
-  height: 100%;          /* Bild füllt volle Höhe */
-  object-fit: cover;     /* Bild wird zugeschnitten, damit es Container komplett füllt */
-  object-position: center calc(-6.5vw);
-  display: block;        /* verhindert kleinen Abstand unter Bildern */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center; /* Bild mittig */
+  display: block;
 }
-
 #entrance {
   display: flex;
   height: calc(100vh - 60px); /* Höhe abzüglich Navbar */
@@ -582,7 +582,12 @@ html, body {
     object-position: center center;
   }
 
-  #layout {
+  #layout2 {
+    flex-direction: column-reverse; /* Modell oben, Text darunter */
+    height: auto;                   /* damit es sich an den Inhalt anpasst */
+  }
+
+  #layout2 {
     flex-direction: column-reverse; /* Modell oben, Text darunter */
     height: auto;                   /* damit es sich an den Inhalt anpasst */
   }
