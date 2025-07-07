@@ -6,6 +6,9 @@ html, body {
   font-family: sans-serif;
   overflow-x: hidden;
 }
+.yo {
+  padding-top: 2rem;
+}
 
 .custom_container {
   padding-left: 3rem;
