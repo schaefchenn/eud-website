@@ -545,6 +545,10 @@ html, body {
     width: 100%;
     height: auto;
   }
+
+   #door2_container {
+    height: 60vh; /* z. B. 60% der Höhe für Modell */
+  }
 }
 
 

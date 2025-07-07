@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mesh.position.set(0, -0.5, 0);
     mesh.rotation.y = 0.8;
     scene.add(mesh);
+
+    controls.update();
+    renderer.render(scene, camera);
   });
 
   function animate() {
