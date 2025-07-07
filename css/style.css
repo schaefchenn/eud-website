@@ -476,6 +476,10 @@ html, body {
     height: 60vh; /* z. B. 60% der Höhe für Modell */
   }
 
+  #door2_container {
+    height: 60vh; /* z. B. 60% der Höhe für Modell */
+  }
+
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
