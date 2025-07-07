@@ -802,6 +802,12 @@ html, body {
     font-size: 1.1rem;
   }
 
+  #text-column2 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-size: 1.1rem;
+  }
+
   /* Bilder responsive */
   .mobileImage {
     max-width: 100%;
