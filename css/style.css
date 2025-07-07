@@ -151,6 +151,13 @@ html, body {
   flex-wrap: wrap;
 }
 
+#layout2 {
+  display: flex;
+  height: calc(100vh - 60px); /* Vollhöhe minus Navbar */
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
 #text-column {
   width: 30vw;
   padding: 2rem;
@@ -160,6 +167,32 @@ html, body {
 }
 
 #three-column {
+  width: 70vw;
+  height: 100%;
+  background: #fff;
+}
+
+#text-column2 {
+  width: 30vw;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  /* neu hinzufügen: */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding-left: 5rem; /* optional, um gleiche Padding zu haben */
+  padding-right: 5rem;
+  font-size: 1.3rem;
+  background-color: #E5E5CB; /* eventuell gleiche Farbe wie #text-column */
+}
+
+#three-column2 {
   width: 70vw;
   height: 100%;
   background: #fff;
@@ -501,6 +534,17 @@ html, body {
   .testiImg {
     padding-top: 3rem;
   }
+
+  #layout2 {
+    flex-direction: column-reverse; /* Modell oben, Text darunter */
+    height: auto;                   /* damit es sich an den Inhalt anpasst */
+  }
+
+  #text-column2,
+  #three-column2 {
+    width: 100%;
+    height: auto;
+  }
 }
 
 
@@ -582,7 +626,7 @@ html, body {
     object-position: center center;
   }
 
-  #layout2 {
+  #layout {
     flex-direction: column-reverse; /* Modell oben, Text darunter */
     height: auto;                   /* damit es sich an den Inhalt anpasst */
   }
@@ -597,6 +641,13 @@ html, body {
     width: 100%;
     height: auto;
   }
+
+  #text-column2,
+  #three-column2 {
+    width: 100%;
+    height: auto;
+  }
+
 
   #door_container {
     height: 60vh; /* z. B. 60% der Höhe für Modell */
